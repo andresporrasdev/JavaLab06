@@ -7,7 +7,7 @@
 
 //SOME MODIFICATION ARE REQUIRED IN THIS SECTION OF YOUR HERE - LOOK CLOSELY!!!
 
-public class Programmer  {
+public abstract class Programmer implements Payme {
 
 private String firstName;
 private String lastName;
@@ -25,6 +25,30 @@ public Programmer(String first, String last, String ssn) {
 * IN THIS PORTION OF YOUR CODE INCLUDE ALL OF SUCH THAT APPLIES.
 */
 
+public String getFirstName() {
+	return firstName;
+}
+
+public void setFirstName(String firstName) {
+	this.firstName = firstName;
+}
+
+public String getLastName() {
+	return lastName;
+}
+
+public void setLastName(String lastName) {
+	this.lastName = lastName;
+}
+
+public String getSocialSecurityNumber() {
+	return socialSecurityNumber;
+}
+
+public void setSocialSecurityNumber(String socialSecurityNumber) {
+	this.socialSecurityNumber = socialSecurityNumber;
+}
+
 
 //return String representation of Programmer object
 @Override
@@ -36,6 +60,8 @@ return String.format("%s %s\n%s: %s\n%s: %s",
 
 //Note: We do NOT implement Payme method getPaymentAmount() here. 
 // THEREFORE, TO AVOID A COMPILATION ERROR, YOU SHOULD DECLARE THIS CLASS AS....??
+
+
 
 
 public abstract double earnings(); /** No implementation here. DO YOU KNOW WHY? What should this method be?*/
