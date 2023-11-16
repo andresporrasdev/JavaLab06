@@ -48,7 +48,12 @@ return getBaseSalary() + super.earnings();
 } 
 
 //return String representation of BasePlusCommissionProgrammer object
-@Override     
+
+@Override        
+public String toString() {
+return String.format("base-plus commission programmer: %s %s\nsocial security number: %s\ngross sales: %.2f\ncommission rate: %.2f\nbase salary: %.2f \npayment due: %.2f", 
+  getFirstName(), getLastName(), getSocialSecurityNumber(), getGrossSales(), getCommissionRate(), getBaseSalary(), getPaymentAmount());
+} 
                                                       
 //TO DO: COMEPLETE THIS PORTION. Format your solution according to sample output.     
 //START     
