@@ -71,10 +71,19 @@ if (getHours() <= 40) { // no overtime
 else {                                                             
   return 40 * getWage() + (getHours() - 40) * getWage() * 1.5;
 }
+}
+
+@Override
+public double getPaymentAmount() {
+	return earnings();
 }                                          
 
 //return String representation of HourlyProgrammer object              
-@Override                                                             
+@Override        
+public String toString() {
+return String.format("hourly Programmer:  %s %s\nsocial security number: %s:\nhourly wage: %.2f hours worked: %.2f\npayment due: %.2f\n", 
+  getFirstName(), getLastName(), getSocialSecurityNumber(), getWage(), getHours(), getPaymentAmount());
+}                                              
 
 //TO DO: COMEPLETE THIS PORTION. Format your solution according to sample output.     
 //START     
