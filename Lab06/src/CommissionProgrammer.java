@@ -70,7 +70,16 @@ return getCommissionRate() * getGrossSales();
 
 //return String representation of CommissionProgrammer object
 
-@Override      
+@Override        
+public String toString() {
+return String.format("commission programmer:  %s %s\nsocial security number: %s\ngross sales: %.2f \ncommission rate: %.2f \npayment due: %.2f\n", 
+  getFirstName(), getLastName(), getSocialSecurityNumber(), getGrossSales(), getCommissionRate(), earnings(), getPaymentAmount());
+}
+
+@Override
+public double getPaymentAmount() {
+	return earnings();
+} 
                                              
 //TO DO: COMEPLETE THIS PORTION. Format your solution according to sample output.     
 //START     
