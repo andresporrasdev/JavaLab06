@@ -12,6 +12,8 @@ public abstract class Programmer implements Payme {
 private String firstName;
 private String lastName;
 private String socialSecurityNumber;
+private int month;
+private int year;
 
 //three-argument constructor
 public Programmer(String first, String last, String ssn) {
@@ -20,6 +22,14 @@ public Programmer(String first, String last, String ssn) {
  socialSecurityNumber = ssn;
 }
 
+//five-argument constructor
+public Programmer(String first, String last, String ssn, int month, int year) {
+firstName = first;
+lastName = last;
+socialSecurityNumber = ssn;
+month = this.month;
+year = this.year;
+}
 /** CHANGES ARE REQUIRED IN THIS SECTION. 
 * THINK OF THE BEST WAY TO ACCESS PRIVATE VARIABLES.
 * IN THIS PORTION OF YOUR CODE INCLUDE ALL OF SUCH THAT APPLIES.
@@ -49,6 +59,21 @@ public void setSocialSecurityNumber(String socialSecurityNumber) {
 	this.socialSecurityNumber = socialSecurityNumber;
 }
 
+public int getMonth() {
+	return month;
+}
+
+public void setMonth(int month) {
+	this.month = month;
+}
+
+public int getYear() {
+	return year;
+}
+
+public void setYear(int year) {
+	this.year = year;
+}
 
 //return String representation of Programmer object
 @Override
