@@ -45,11 +45,20 @@ return weeklySalary;
 @Override                                                           
 public double earnings() {                                          
 return getWeeklySalary();                                        
+}
+
+@Override
+public double getPaymentAmount() {
+	return getWeeklySalary();
 }                                             
 
 //return String representation of SalariedProgrammer object   
 @Override        
-                                            
+public String toString() {
+return String.format("salaried Programmer: %s %s\nsocial security number: %s:\nweekly salary:%.2f: \npayment due: %.2f\n", 
+  getFirstName(), getLastName(), getSocialSecurityNumber(), earnings(), getPaymentAmount());
+} 
+
 //TO DO: COMEPLETE THIS PORTION. Format your solution according to sample output.     
 //START     
 // INSERT YOUR CODE
