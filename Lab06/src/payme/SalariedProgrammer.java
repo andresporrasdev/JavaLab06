@@ -1,10 +1,24 @@
-
+/*
+* Title Assessment: Lab06
+* Student Name: Andres Camilo Porras Becerra
+* Due Date: 19 Nov
+* Description: This program shows polymorphism and interfaces by applying a method to objects of different classes. 
+* Professor Name: Islam Gomaa
+* Course CST8284 Section 331
+*/
 // THIS IS A CODE FILE FOR LAB 6. THIS CODE FILE REQUIRES SOME MODIFICATIONS!!!
 
 //SalariedProgrammer.java
 //SalariedProgrammer concrete class extends abstract class Programmer.
+package payme;
 
+/**
+ * SalariedProgrammer concrete class extends abstract class Programmer
+ * @author AndresPorras
+ */
 public class SalariedProgrammer extends Programmer  {
+
+// Variable for store the Weekly salary of the programmer
 private double weeklySalary;
 
 //constructor
@@ -40,6 +54,8 @@ return weeklySalary;
 
 //MODIFY THIS PORTION. WHY WILL THIS PORTION OF YOUR CODE REQUIRE MODIFICATION?
 //PROVIDE THE ANSWER TO THIS QUESTION TO YOUR PROFESSOR DURING DEMO
+//Ans: Because earnings is a abstract method in programmer and should be implemented in subtypes classes
+//Same for getPaymentAmount() as it comes from the interface payme that was implemented in Programmer class
 
 
 @Override                                                           
@@ -51,17 +67,16 @@ return getWeeklySalary();
 public double getPaymentAmount() {
 	return getWeeklySalary();
 }                                             
+/**
+ * Return a string representation of SalariedProgrammer object 
+ * @return string String representation of SalariedProgrammer object   
 
-//return String representation of SalariedProgrammer object   
+ */
 @Override        
 public String toString() {
 return String.format("salaried Programmer: %s %s\nsocial security number: %s:\nweekly salary:%.2f: \npayment due: %.2f\n", 
   getFirstName(), getLastName(), getSocialSecurityNumber(), earnings(), getPaymentAmount());
 } 
 
-//TO DO: COMEPLETE THIS PORTION. Format your solution according to sample output.     
-//START     
-// INSERT YOUR CODE
-//END
 }
 

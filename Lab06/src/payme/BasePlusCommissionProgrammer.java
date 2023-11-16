@@ -1,9 +1,19 @@
-
+/*
+* Title Assessment: Lab06
+* Student Name: Andres Camilo Porras Becerra
+* Due Date: 19 Nov
+* Description: This program shows polymorphism and interfaces by applying a method to objects of different classes. 
+* Professor Name: Islam Gomaa
+* Course CST8284 Section 331
+*/
 // THIS IS A CODE FILE FOR LAB 6. THIS CODE FILE REQUIRES SOME MODIFICATIONS!!!
+package payme;
 
-
-//BasePlusCommissionProgrammer.java
-//BasePlusCommissionProgrammer class extends CommissionProgrammer.
+/**
+ * BasePlusCommissionProgrammer.java
+ * BasePlusCommissionProgrammer class extends CommissionProgrammer.
+ * @author AndresPorras
+ */
 
 public class BasePlusCommissionProgrammer extends CommissionProgrammer { 
 
@@ -41,6 +51,8 @@ return baseSalary;
 
 //MODIFY THIS PORTION. WHY WILL THIS PORTION OF YOUR CODE REQUIRE MODIFICATION?
 //PROVIDE THE ANSWER TO THIS QUESTION TO YOUR PROFESSOR DURING DEMO
+//Ans: Because earnings is a abstract method in programmer and should be implemented in subtypes classes
+//Same for getPaymentAmount() as it comes from the interface payme that was implemented in Programmer class
 
 @Override                                                            
 public double earnings() {                                             
@@ -54,12 +66,6 @@ public String toString() {
 return String.format("base-plus commission programmer: %s %s\nsocial security number: %s\ngross sales: %.2f\ncommission rate: %.2f\nbase salary: %.2f \npayment due: %.2f", 
   getFirstName(), getLastName(), getSocialSecurityNumber(), getGrossSales(), getCommissionRate(), getBaseSalary(), getPaymentAmount());
 } 
-                                                      
-//TO DO: COMEPLETE THIS PORTION. Format your solution according to sample output.     
-//START     
-// INSERT YOUR CODE
-//END
-
 
 }
 

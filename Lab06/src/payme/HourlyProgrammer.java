@@ -1,8 +1,20 @@
-
+/*
+* Title Assessment: Lab06
+* Student Name: Andres Camilo Porras Becerra
+* Due Date: 19 Nov
+* Description: This program shows polymorphism and interfaces by applying a method to objects of different classes. 
+* Professor Name: Islam Gomaa
+* Course CST8284 Section 331
+*/
 // THIS IS A CODE FILE FOR LAB 6. THIS CODE FILE REQUIRES SOME MODIFICATIONS!!!
+package payme;
 
-// HourlyProgrammer.java
-// HourlyProgrammer class extends Programmer.
+/**
+ * HourlyProgrammer.java
+ * HourlyProgrammer class extends Programmer.
+ * @author AndresPorras
+ */
+
 
 public class HourlyProgrammer extends Programmer {
 private double wage; // wage per hour
@@ -62,6 +74,8 @@ return hours;
 
 //MODIFY THIS PORTION. WHY WILL THIS PORTION OF YOUR CODE REQUIRE MODIFICATION?
 //PROVIDE THE ANSWER TO THIS QUESTION TO YOUR PROFESSOR DURING DEMO
+//Ans: Because earnings is a abstract method in programmer and should be implemented in subtypes classes
+//Same for getPaymentAmount() as it comes from the interface payme that was implemented in Programmer class
 
 @Override                                                           
 public double earnings() {                                            
@@ -84,12 +98,6 @@ public String toString() {
 return String.format("hourly Programmer:  %s %s\nsocial security number: %s:\nhourly wage: %.2f hours worked: %.2f\npayment due: %.2f\n", 
   getFirstName(), getLastName(), getSocialSecurityNumber(), getWage(), getHours(), getPaymentAmount());
 }                                              
-
-//TO DO: COMEPLETE THIS PORTION. Format your solution according to sample output.     
-//START     
-// INSERT YOUR CODE
-//END
-
-                     
+             
 }
 

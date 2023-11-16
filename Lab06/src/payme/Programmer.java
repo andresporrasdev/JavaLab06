@@ -7,8 +7,12 @@
 * Course CST8284 Section 331
 */
 //Programmer.java
+package payme;
 
-//Programmer - This is an abstract superclass that IMPLEMENTS the Payme interface.
+/**
+ * Programmer - This is an abstract superclass that IMPLEMENTS the Payme interface.
+ *  @author AndresPorras
+ */
 
 public abstract class Programmer implements Payme {
 
@@ -72,7 +76,6 @@ public String getSocialSecurityNumber() {
 	return socialSecurityNumber;
 }
 
-
 /**
  * Set social security number of programmer
  * @param socialSecurityNumber security number of programmer
@@ -81,37 +84,52 @@ public void setSocialSecurityNumber(String socialSecurityNumber) {
 	this.socialSecurityNumber = socialSecurityNumber;
 }
 
+/**
+ * Get month of the payment
+ * @return month of the payment
+ */
 public int getMonth() {
 	return month;
 }
 
+/**
+ * Set month of the payment
+ * @param month month of the payment
+ */
 public void setMonth(int month) {
 	this.month = month;
 }
 
+/**
+ * Get year of the payment
+ * @return year year of the payment
+ */
 public int getYear() {
 	return year;
 }
 
+/**
+ * Set year of the payment
+ * @param year year of the payment
+ */
 public void setYear(int year) {
 	this.year = year;
 }
 
-//return String representation of Programmer object
+/**
+ * String representation of Programmer object
+ * @return string String representation of Programmer object
+ */
 @Override
 public String toString() {
 return String.format("%s %s\n%s: %s\n%s: %s", 
   getFirstName(), getLastName(), getSocialSecurityNumber());
 } 
 
-
-//Note: We do NOT implement Payme method getPaymentAmount() here. 
-// THEREFORE, TO AVOID A COMPILATION ERROR, YOU SHOULD DECLARE THIS CLASS AS....??
-
-
-
-
-public abstract double earnings(); /** No implementation here. DO YOU KNOW WHY? What should this method be?*/
+/**
+ * Abstract earnings() method
+ */
+public abstract double earnings(); /** No implementation here. DO YOU KNOW WHY? What should this method be? Ans: Abstract*/
 } 
 
 

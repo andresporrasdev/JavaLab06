@@ -1,24 +1,30 @@
+/*
+* Title Assessment: Lab06
+* Student Name: Andres Camilo Porras Becerra
+* Due Date: 19 Nov
+* Description: This program shows polymorphism and interfaces by applying a method to objects of different classes. 
+* Professor Name: Islam Gomaa
+* Course CST8284 Section 331
+*/
+package payme;
 
-// LAB 6: PaymeInterfaceTest.java
-
-//This is the test for your interface Payme.
-
+/**
+ * This is the test for the interface Payme.
+ * @arg args No arguments for main method
+ * @author AndresPorras
+ */
 public class PaymeInterfaceTest  {
 
 	public static void main(String[] args) {
-		
-	 //TO DO: IN THIS PORTION OF THE CODE, SEVERAL CHANGES SHOULD BE MADE:
-	// CREATE SIX-ELEMENTS Payme array HERE 
-		
-	 //START CODE 
+
+	 //Creation of six elements for test the programmers classes
 		Payme[] paymeObjects = new Payme[6];
-	//END CODE
-	 
+
 	
-	// TO DO: POPULATE THE ARRAY YOU CREATED WITH OBJECTS THAT IMPLEMENT Payable
-	//CHECK THE OUTPUT FILE AND REUSE EXACTLY THE DETAILS PROVIDED SUCH AS FIRST NAME
-	// LAST NAME, SOCIAL INSURANCE NUMBER, ETC.
-	
+	/*TO DO: POPULATE THE ARRAY YOU CREATED WITH OBJECTS THAT IMPLEMENT Payable
+	*CHECK THE OUTPUT FILE AND REUSE EXACTLY THE DETAILS PROVIDED SUCH AS FIRST NAME
+	*LAST NAME, SOCIAL INSURANCE NUMBER, ETC.
+	*/
 	 // START CODE
 		paymeObjects[0] = new Invoice("22776","brakes", 3, 300);
 		paymeObjects[1] = new Invoice("33442","gear", 5, 90.99);
@@ -49,15 +55,7 @@ public class PaymeInterfaceTest  {
 		       System.out.printf(
 		          "new base salary with 10%% increase is: $%,.2f\n",
 		          programmer.getBaseSalary());
-		    } 
-		
-		// TO DO: INSERT YOUR PRINT STATEMENT HERE: ENSURE THAT YOUR 
-		// OUTPUT FOLLOWS THE OUTPUT SAMPLE PROVIDED
-		
-		// START CODE 
-		
-		// END CODE
-		
+		    	} 
 		 	}
 	}
 }

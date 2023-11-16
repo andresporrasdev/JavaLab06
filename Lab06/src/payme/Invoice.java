@@ -1,4 +1,11 @@
-
+/*
+* Title Assessment: Lab06
+* Student Name: Andres Camilo Porras Becerra
+* Due Date: 19 Nov
+* Description: This program shows polymorphism and interfaces by applying a method to objects of different classes. 
+* Professor Name: Islam Gomaa
+* Course CST8284 Section 331
+*/
 
 
 //LAB 6 - CST8284
@@ -7,6 +14,7 @@
 //This is the Invoice class which is an UNRELATED CLASS to the Programmer superclass
 
 //The Invoice class implements Payme interface. NO MODIFICATION IS REQUIRED HERE!!!
+package payme;
 
 public class Invoice implements Payme {
 
