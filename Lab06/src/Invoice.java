@@ -64,19 +64,22 @@ public double getPricePerItem() {
  return pricePerItem;
 }
 
-//return String representation of Invoice object
-@Override
-public String toString() {
- return String.format("%s: \n%s: %s (%s) \n%s: %d \n%s: $%,.2f", 
-    "invoice", "part number", getPartNumber(), getPartDescription(), 
-    "quantity", getQuantity(), "price per item", getPricePerItem());
-} 
-
 //method required to carry out contract with interface Payme
 @Override
 public double getPaymentAmount() {
- return getQuantity() * getPricePerItem(); // calculate total cost
+return getQuantity() * getPricePerItem(); // calculate total cost
 }
+
+//return String representation of Invoice object
+@Override
+public String toString() {
+ return String.format("%s: \n%s: %s (%s) \n%s: %d \n%s: $%,.2f \n%s: $%,.2f\n", 
+    "invoice", "part number", getPartNumber(), getPartDescription(), 
+    "quantity", getQuantity(), "price per item", getPricePerItem(), "payment due:",getPaymentAmount());
+} 
+
+
+
 }
 
 
